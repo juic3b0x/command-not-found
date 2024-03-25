@@ -23,7 +23,7 @@ const repos = JSON.parse(await readFile(join(NEOTERM_PKG_CACHEDIR, 'repo.json'))
 
 async function processRepo(repo) {
   for (const arch of archs) {
-    const url = `${repo.url}/dists/${repo.distribution}/Contents-${arch}.xz`;
+    const url = `${repo.url}/dists/${repo.distribution}/${repo.component}/Contents-${arch}.xz`;
     const response = await fetch(url);
 
     if (!response.ok) {
