@@ -7,7 +7,7 @@ import { promisify } from 'node:util';
 const gunzipAsync = promisify(gunzip);
 
 // TODO(@thunder-coding): Do not hardcode list of known architectures.
-const archs = ["aarch64", "arm", "i686", "x86_64"];
+const archs = ["aarch64"];
 const { NEOTERM_PKG_CACHEDIR, NEOTERM_PREFIX } = process.env;
 
 if (!NEOTERM_PKG_CACHEDIR) {
